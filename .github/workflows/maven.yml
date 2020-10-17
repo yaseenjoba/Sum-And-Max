@@ -38,9 +38,9 @@ jobs:
       - name: deploy
         uses: appleboy/scp-action@master
         with:
-          host: ${{ IP }}
+          host: ${{ secrets.IP }}
           username: root
-          key: ${{sk}}
+          key: ${{secrets.sk}}
           source: "target/PPU2-1.0.jar"
           target: "afnan"
       - name: run jar via ssh
@@ -49,6 +49,6 @@ jobs:
           command: |
             cd ~/deployment/target
             java -jar demo-1.0-SNAPSHOT.jar
-          host: ${{ IP }}
+          host: ${{ secrets.IP }}
           user: root
-          key: ${{ SK }}
+          key: ${{ secrets.SK }}
