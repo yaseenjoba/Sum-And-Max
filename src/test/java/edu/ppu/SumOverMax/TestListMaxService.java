@@ -23,7 +23,7 @@ public class TestListMaxService {
         for (int i = 0; i<10;i++){
             arr.add(i);
         }
-        Assert.assertEquals(0,listMaxService.getMax(arr));
+        Assert.assertEquals(9,listMaxService.getMax(arr));
 
     }
 
