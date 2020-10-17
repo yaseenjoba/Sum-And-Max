@@ -18,7 +18,7 @@ public class TestListSumService {
         list.add(1);
         list.add(1);
         assertEquals(3, tester.getSum(list));
-
+//as
     }
 
     @Test
